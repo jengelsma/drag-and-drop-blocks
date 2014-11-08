@@ -9,7 +9,9 @@
 #import "BlocksEditorViewController.h"
 
 @interface BlocksEditorViewController ()
-
+{
+    UIButton *currentButton;
+}
 @end
 
 @implementation BlocksEditorViewController
@@ -24,26 +26,25 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction) imageTouch:(id) sender withEvent:(UIEvent *) event
+- (IBAction) imageTouch:(UIButton*) sender withEvent:(UIEvent *) event
 {
-    UIView* theTarget = (UIView*)sender;
-    // source buttons (e.g. ones that stay on the button are tagged 99).
-    if(theTarget.tag == 99) {
-        UIButton *newButton = [[UIButton alloc] initWithFrame:theTarget.frame];
-        newButton.tag = 99;
-        newButton.backgroundColor = theTarget.backgroundColor;
-        [newButton addTarget:self action:@selector(imageTouch:withEvent:) forControlEvents:UIControlEventTouchDown];
-        [newButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
-        [self.view addSubview:newButton];
-        theTarget.tag = 0;
+    // source buttons (e.g. ones that stay in place on the bottom are tagged 99).
+    if(sender.tag == 99) {
+        currentButton = [[UIButton alloc] initWithFrame:sender.frame];
+        currentButton.tag = 0;
+        currentButton.backgroundColor = sender.backgroundColor;
+        [currentButton addTarget:self action:@selector(imageTouch:withEvent:) forControlEvents:UIControlEventTouchDown];
+        [currentButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
+        [self.view addSubview:currentButton];
+    } else {
+        currentButton = sender;
     }
 }
 
 - (IBAction) imageMoved:(id) sender withEvent:(UIEvent *) event
 {
     CGPoint point = [[[event allTouches] anyObject] locationInView:self.view];
-    UIControl *control = sender;
-    control.center = point;
+    currentButton.center = point;
 }
 
 

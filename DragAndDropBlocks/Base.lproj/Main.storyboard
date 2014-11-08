@@ -28,6 +28,7 @@
                                 </state>
                                 <connections>
                                     <action selector="imageMoved:withEvent:" destination="vXZ-lx-hvc" eventType="touchDragInside" id="3hR-WR-isL"/>
+                                    <action selector="imageMoved:withEvent:" destination="vXZ-lx-hvc" eventType="touchDragOutside" id="MPr-Y9-ll1"/>
                                     <action selector="imageTouch:withEvent:" destination="vXZ-lx-hvc" eventType="touchDown" id="I2q-sW-bng"/>
                                 </connections>
                             </button>
@@ -43,6 +44,7 @@
                                 </state>
                                 <connections>
                                     <action selector="imageMoved:withEvent:" destination="vXZ-lx-hvc" eventType="touchDragInside" id="hly-ye-23u"/>
+                                    <action selector="imageMoved:withEvent:" destination="vXZ-lx-hvc" eventType="touchDragOutside" id="tD2-tg-VHg"/>
                                     <action selector="imageTouch:withEvent:" destination="vXZ-lx-hvc" eventType="touchDown" id="yFd-rk-R1b"/>
                                 </connections>
                             </button>
@@ -57,6 +59,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="imageMoved:withEvent:" destination="vXZ-lx-hvc" eventType="touchDragOutside" id="1BC-Ji-NmB"/>
                                     <action selector="imageMoved:withEvent:" destination="vXZ-lx-hvc" eventType="touchDragInside" id="9J8-Kl-Cq4"/>
                                     <action selector="imageTouch:withEvent:" destination="vXZ-lx-hvc" eventType="touchDown" id="ezC-tu-FDd"/>
                                 </connections>
@@ -72,6 +75,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="imageMoved:withEvent:" destination="vXZ-lx-hvc" eventType="touchDragOutside" id="dc5-3H-ZDb"/>
                                     <action selector="imageMoved:withEvent:" destination="vXZ-lx-hvc" eventType="touchDragInside" id="phd-hm-Ltg"/>
                                     <action selector="imageTouch:withEvent:" destination="vXZ-lx-hvc" eventType="touchDown" id="bf3-pW-jIg"/>
                                 </connections>
@@ -88,6 +92,7 @@
                                 </state>
                                 <connections>
                                     <action selector="imageMoved:withEvent:" destination="vXZ-lx-hvc" eventType="touchDragInside" id="dJp-Mj-ppO"/>
+                                    <action selector="imageMoved:withEvent:" destination="vXZ-lx-hvc" eventType="touchDragOutside" id="hiZ-KQ-Y0u"/>
                                     <action selector="imageTouch:withEvent:" destination="vXZ-lx-hvc" eventType="touchDown" id="juR-Bc-aPA"/>
                                 </connections>
                             </button>
